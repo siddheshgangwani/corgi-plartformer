@@ -1,0 +1,10 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
+    game.over(true, effects.bubbles)
+})
+scene.setBackgroundColor(9)
+let myCorg = corgio.create(SpriteKind.Player)
+myCorg.horizontalMovement()
+myCorg.updateSprite()
+tiles.setTilemap(tilemap`level1`)
+myCorg.follow()
+myCorg.verticalMovement()
